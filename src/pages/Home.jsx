@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -17,7 +18,9 @@ const Home = () => {
           </p>
         </div>
         <div className="explore-container">
-          <button className="explore-btn">Explore</button>
+          <div className="explore-content">
+            <NavLink to="/destination">Explore</NavLink>
+          </div>
         </div>
       </div>
     </section>
