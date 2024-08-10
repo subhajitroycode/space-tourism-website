@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { crew, destinations, technology } from "./data.json";
 import { Home, Destination, Crew, Technology } from "./pages";

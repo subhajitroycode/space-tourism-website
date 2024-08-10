@@ -138,3 +138,67 @@ hr {
 .explore-content a:hover::before {
   scale: 1.5;
 }
+
+.destination-container {
+  height: 100vh;
+  background-image: url("./assets/destination/background-destination-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10rem;
+}
+
+.destination-heading-title {
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-left: 11.5rem;
+  letter-spacing: 5px;
+}
+
+.destination-heading-title span {
+  font-weight: 600;
+  margin-right: 15px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.planet-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 10rem;
+  width: 80%;
+  margin: 5rem auto 0;
+}
+
+.planet-content-navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.planet-content-navigation .tab {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.planet-content-navigation .tab:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.planet-content-navigation .tab.active {
+  border-bottom: 2px solid #fff;
+}
+
+.planet-content-info h1 {
+  font-size: 7.5rem;
+  font-family: var(--font-family-secondary);
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
