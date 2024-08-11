@@ -17,6 +17,7 @@ body {
   font-family: var(--font-family-primary);
 }
 
+/* Header component */
 header {
   display: flex;
   justify-content: space-between;
@@ -69,6 +70,7 @@ hr {
   border-bottom: 2px solid #fff;
 }
 
+/* Home page */
 .home-container {
   height: 100vh;
   background-image: url("./assets/home/background-home-desktop.jpg");
@@ -139,6 +141,7 @@ hr {
   scale: 1.5;
 }
 
+/* Destination page */
 .destination-container {
   height: 100vh;
   background-image: url("./assets/destination/background-destination-desktop.jpg");
@@ -147,7 +150,7 @@ hr {
   padding-top: 10rem;
 }
 
-.destination-heading-title {
+.heading-title {
   font-size: 1.8rem;
   font-weight: 200;
   text-transform: uppercase;
@@ -155,7 +158,7 @@ hr {
   letter-spacing: 5px;
 }
 
-.destination-heading-title span {
+.heading-title span {
   font-weight: 600;
   margin-right: 15px;
   color: rgba(255, 255, 255, 0.2);
@@ -164,9 +167,8 @@ hr {
 .planet-container {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   gap: 10rem;
-  width: 80%;
+  width: 72%;
   margin: 5rem auto 0;
 }
 
@@ -180,6 +182,7 @@ hr {
   font-weight: 300;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
 }
 
 .planet-content-navigation .tab {
@@ -191,14 +194,48 @@ hr {
   border-bottom: 2px solid rgba(255, 255, 255, 0.6);
 }
 
-.planet-content-navigation .tab.active {
+.planet-content-navigation .tab.destination-active {
   border-bottom: 2px solid #fff;
 }
 
 .planet-content-info h1 {
-  font-size: 7.5rem;
+  font-size: 6.5rem;
   font-family: var(--font-family-secondary);
   font-weight: 300;
   text-transform: uppercase;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem;
+}
+
+.planet-description {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 200;
+  color: rgb(255, 255, 255, 0.95);
+  width: 85%;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.planet-content-info hr {
+  width: 90%;
+}
+
+.planet-content-info-details {
+  display: flex;
+  gap: 5rem;
+  margin-top: 1.2rem;
+  text-transform: uppercase;
+}
+
+.planet-content-info-details p {
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+.planet-content-info-details span {
+  display: block;
+  font-size: 1.8rem;
+  font-family: var(--font-family-secondary);
+  margin-top: 12px;
 }

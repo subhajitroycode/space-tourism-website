@@ -4,13 +4,18 @@ import { destinations } from "../data.json";
 const Destination = () => {
   const [planetNumber, setPlanetNumber] = useState(1);
 
-  const changeTab = (number) => {
+  const changeTab = (e, number) => {
     setPlanetNumber(number);
+    const tabs = document.querySelectorAll(".tab");
+    tabs.forEach((tab) => {
+      tab.classList.remove("destination-active");
+    });
+    e.target.classList.add("destination-active");
   };
 
   return (
     <section className="destination-container">
-      <h1 className="destination-heading-title">
+      <h1 className="heading-title">
         <span>01</span> pick your destination
       </h1>
       <div className="planet-container">
@@ -22,22 +27,27 @@ const Destination = () => {
         </div>
         <div className="planets-content">
           <div className="planet-content-navigation">
-            <div className="tab" onClick={() => changeTab(0)}>
+            <div className="tab" onClick={(e) => changeTab(e, 0)}>
               moon
             </div>
-            <div className="tab active" onClick={() => changeTab(1)}>
+            <div
+              className="tab destination-active"
+              onClick={(e) => changeTab(e, 1)}
+            >
               mars
             </div>
-            <div className="tab" onClick={() => changeTab(2)}>
+            <div className="tab" onClick={(e) => changeTab(e, 2)}>
               europa
             </div>
-            <div className="tab" onClick={() => changeTab(3)}>
+            <div className="tab" onClick={(e) => changeTab(e, 3)}>
               titan
             </div>
           </div>
           <div className="planet-content-info">
             <h1>{destinations[planetNumber].name}</h1>
-            <p>{destinations[planetNumber].description}</p>
+            <p className="planet-description">
+              {destinations[planetNumber].description}
+            </p>
             <hr />
             <div className="planet-content-info-details">
               <p className="distance-info">
