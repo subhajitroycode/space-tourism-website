@@ -17,6 +17,27 @@ body {
   font-family: var(--font-family-primary);
 }
 
+section {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heading-title {
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-left: 11.5rem;
+  letter-spacing: 5px;
+}
+
+.heading-title span {
+  font-weight: 600;
+  margin-right: 15px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
 /* Header component */
 header {
   display: flex;
@@ -67,15 +88,16 @@ hr {
 }
 
 .navbar-list li > a:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.navbar-list li > a.active {
   border-bottom: 2px solid #fff;
 }
 
 /* Home page */
 .home-container {
-  height: 100vh;
   background-image: url("./assets/home/background-home-desktop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   padding-top: 20rem;
 }
 
@@ -143,25 +165,8 @@ hr {
 
 /* Destination page */
 .destination-container {
-  height: 100vh;
   background-image: url("./assets/destination/background-destination-desktop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   padding-top: 10rem;
-}
-
-.heading-title {
-  font-size: 1.8rem;
-  font-weight: 200;
-  text-transform: uppercase;
-  margin-left: 11.5rem;
-  letter-spacing: 5px;
-}
-
-.heading-title span {
-  font-weight: 600;
-  margin-right: 15px;
-  color: rgba(255, 255, 255, 0.2);
 }
 
 .planet-container {
@@ -198,7 +203,7 @@ hr {
   border-bottom: 2px solid #fff;
 }
 
-.planet-content-info h1 {
+.planet-content-info h2 {
   font-size: 6.5rem;
   font-family: var(--font-family-secondary);
   font-weight: 300;
@@ -238,4 +243,47 @@ hr {
   font-size: 1.8rem;
   font-family: var(--font-family-secondary);
   margin-top: 12px;
+}
+
+/* Crew page */
+.crew-container {
+  background-image: url("./assets/crew/background-crew-desktop.jpg");
+  padding-top: 10rem;
+}
+
+.crew-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.crew-content-info h2 {
+  font-family: var(--font-family-secondary);
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+}
+
+.crew-content-info h2 span {
+  font-size: 1.8rem;
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+}
+
+.crew-content-info p {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  font-weight: 200;
+  color: rgba(215, 237, 255, 0.95);
+  width: 65%;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.crew-image img {
+  height: 76vh;
 }

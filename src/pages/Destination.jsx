@@ -44,7 +44,7 @@ const Destination = () => {
             </div>
           </div>
           <div className="planet-content-info">
-            <h1>{destinations[planetNumber].name}</h1>
+            <h2>{destinations[planetNumber].name}</h2>
             <p className="planet-description">
               {destinations[planetNumber].description}
             </p>
