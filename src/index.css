@@ -4,6 +4,7 @@
 :root {
   --font-family-primary: "Barlow Condensed", sans-serif;
   --font-family-secondary: "Bellefair", serif;
+  --swiper-theme-color: #ffffff;
 }
 
 * {
@@ -286,4 +287,30 @@ hr {
 
 .crew-image img {
   height: 76vh;
+}
+
+/* Swiperjs stylings */
+.swiper-pagination {
+  text-align: left;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: auto;
+  left: 12rem;
+  bottom: 8rem;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin-left: 1rem;
 }
