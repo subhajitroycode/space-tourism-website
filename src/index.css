@@ -286,7 +286,7 @@ hr {
 }
 
 .crew-image img {
-  height: 76vh;
+  height: 73vh;
 }
 
 /* Swiperjs stylings */
@@ -313,4 +313,70 @@ hr {
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
   margin-left: 1rem;
+}
+
+/* Technology page */
+.technology-container {
+  background-image: url("./assets/technology/background-technology-desktop.jpg");
+  padding-top: 10rem;
+}
+
+.technology-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.technology-content-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  width: 54%;
+}
+
+.technology-navigation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.technology-navigation-container .tab {
+  width: 58px;
+  height: 58px;
+  border-radius: 100%;
+  background: transparent;
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  font-family: var(--font-family-secondary);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.technology-navigation-container .tab.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.technology-content-info h4 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.technology-content-info h4 span {
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: var(--font-family-secondary);
+  display: block;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.technology-content-info p {
+  width: 58%;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  font-weight: 300;
 }

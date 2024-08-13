@@ -8,8 +8,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const Crew = () => {
-  // const [currentCrew, setCurrentCrew] = useState(2);
-
   return (
     <section className="crew-container">
       <h1 className="heading-title">
@@ -21,27 +19,6 @@ const Crew = () => {
         pagination={{ clickable: true }}
         modules={[Pagination, Keyboard]}
       >
-        {/* <div className="crew-info">
-          <div className="crew-content-info">
-            <h2>
-              <span>{crew[currentCrew].role}</span>
-              {crew[currentCrew].name}
-            </h2>
-            <p>{crew[currentCrew].bio}</p>
-          </div>
-          <div className="crew-content-navigation">
-            <div className="tab"></div>
-            <div className="tab"></div>
-            <div className="tab"></div>
-            <div className="tab"></div>
-          </div>
-        </div>
-        <div className="crew-image">
-          <img
-            src={crew[currentCrew].images.webp}
-            alt={crew[currentCrew].name}
-          />
-        </div> */}
         {crew.map((member, id) => {
           return (
             <SwiperSlide key={id}>
