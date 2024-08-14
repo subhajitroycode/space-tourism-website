@@ -380,3 +380,144 @@ hr {
   letter-spacing: 1px;
   font-weight: 300;
 }
+
+/* Tablet Screen */
+@media screen and (max-width: 1024px) {
+  header {
+    margin: 0;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .menu-icon {
+    width: 62vw;
+    background-color: #131522;
+  }
+
+  .navbar-list li {
+    padding: 3rem 0;
+    font-size: 16px;
+  }
+
+  .navbar-list li > a {
+    padding: 3rem 0;
+  }
+
+  .navbar-list li > a.active {
+    border-bottom: 3px solid #fff;
+  }
+
+  .navbar-list li > a span {
+    display: none;
+  }
+
+  .home-container {
+    background-image: url("./assets/home/background-home-tablet.jpg");
+    padding-top: 15rem;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12rem;
+  }
+
+  .home-content {
+    width: auto;
+  }
+
+  .home-title {
+    font-size: 1.4rem;
+  }
+
+  .home-description {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .explore-content a {
+    width: 250px;
+    height: 250px;
+    font-size: 2.2rem;
+  }
+
+  .heading-title {
+    margin-left: 2.8rem;
+  }
+
+  .destination-container {
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
+  }
+
+  .planet-container {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    gap: 5rem;
+  }
+
+  .planet-image img {
+    width: 350px;
+  }
+
+  .planets-content {
+    text-align: center;
+  }
+
+  .planet-content-navigation {
+    justify-content: center;
+  }
+
+  .planet-description {
+    margin: 0 auto 2.5rem;
+  }
+
+  .planet-content-info-details {
+    justify-content: center;
+  }
+
+  .crew-content {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+
+  .crew-content-info {
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .crew-content-info p {
+    margin: 1.2rem auto 2.5rem;
+    width: auto;
+    padding: 0 2rem;
+  }
+
+  .crew-image img {
+    height: 48vh;
+  }
+
+  .swiper-pagination {
+    text-align: center;
+  }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: 20rem;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    height: auto;
+    padding-bottom: 2rem;
+  }
+}
