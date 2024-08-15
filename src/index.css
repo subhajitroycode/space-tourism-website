@@ -16,6 +16,7 @@
 body {
   color: #fff;
   font-family: var(--font-family-primary);
+  overflow-x: hidden;
 }
 
 section {
@@ -41,13 +42,19 @@ section {
 
 /* Header component */
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 3rem;
   padding-left: 2.5rem;
-  position: absolute;
-  width: 100%;
 }
 
 hr {
@@ -58,20 +65,18 @@ hr {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.menu-icon {
+.navbar-list {
   width: 50vw;
   background-color: transparent;
   backdrop-filter: blur(20px);
-}
-
-.navbar-list {
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  list-style: none;
 }
 
 .navbar-list li {
+  list-style: none;
   padding: 2rem 0;
   letter-spacing: 3px;
   font-size: 14px;
@@ -94,6 +99,10 @@ hr {
 
 .navbar-list li > a.active {
   border-bottom: 2px solid #fff;
+}
+
+.mobile-navbar-btn {
+  display: none;
 }
 
 /* Home page */
@@ -382,8 +391,8 @@ hr {
 }
 
 /* Tablet Screen */
-@media screen and (max-width: 1024px) {
-  header {
+@media screen and (width <= 1024px) {
+  header nav {
     margin: 0;
   }
 
@@ -391,7 +400,7 @@ hr {
     display: none;
   }
 
-  .menu-icon {
+  .navbar-list {
     width: 62vw;
     background-color: #131522;
   }
@@ -553,9 +562,171 @@ hr {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   section {
     height: auto;
     padding-bottom: 2rem;
+  }
+}
+
+/* Mobile Screen */
+@media screen and (width <= 520px) {
+  header nav {
+    padding: 2rem;
+  }
+
+  .navbar-list {
+    position: fixed;
+    inset: 0 0 0 30%;
+    background: rgba(255, 255, 255, 0.2);
+    width: auto;
+    z-index: 9;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10rem 0;
+    gap: 2rem;
+    transform: translate(100%);
+    transition: 500ms ease-in-out;
+  }
+
+  .navbar-list li,
+  .navbar-list li > a {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+
+  .navbar-list li > a {
+    padding-left: 2rem;
+    border-left: 5px solid transparent;
+  }
+
+  .navbar-list li > a span {
+    display: inline-block;
+  }
+
+  .navbar-list li > a.active {
+    border-bottom: none;
+    border-left: 5px solid #fff;
+  }
+
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 11;
+  }
+
+  .navbar-list.active {
+    transform: translate(0);
+  }
+
+  .home-container {
+    background-image: url("./assets/home/background-home-mobile.jpg");
+    padding-top: 10rem;
+  }
+
+  .home-title {
+    font-size: 1.2rem;
+  }
+
+  .home-title span {
+    font-size: 5.6rem;
+  }
+
+  .home-description {
+    width: 85%;
+  }
+
+  .heading-title {
+    margin-left: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .destination-container {
+    background-image: url("./assets/destination/background-destination-mobile.jpg");
+    padding-top: 8rem;
+  }
+
+  .planet-container {
+    margin-top: 3rem;
+    gap: 1rem;
+  }
+
+  .planet-image img {
+    width: 250px;
+  }
+
+  .planet-content-info h2 {
+    font-size: 4rem;
+  }
+
+  .planet-content-info hr {
+    display: block;
+    margin: auto;
+  }
+
+  .planet-description {
+    margin-bottom: 2rem;
+  }
+
+  .planet-content-info-details {
+    margin-top: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .crew-container {
+    background-image: url("./assets/crew/background-crew-mobile.jpg");
+    padding-top: 8rem;
+    height: 100vh;
+  }
+
+  .crew-content {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .crew-image img {
+    height: 30vh;
+  }
+
+  .crew-content-info {
+    margin-top: 3rem;
+  }
+
+  .crew-content-info h2 {
+    font-size: 2rem;
+  }
+
+  .crew-content-info h2 span {
+    font-size: 1.4rem;
+  }
+
+  .crew-content-info p {
+    padding: 0 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  .technology-container {
+    background-image: url("./assets/technology/background-technology-mobile.jpg");
+    padding-top: 8rem;
+  }
+
+  .technology-content {
+    margin-top: 2.5rem;
+    gap: 2rem;
+  }
+
+  .technology-content-container {
+    gap: 2.5rem;
+  }
+
+  .technology-content-info h4 span {
+    font-size: 2rem;
+  }
+
+  .technology-content-info p {
+    width: 90%;
   }
 }
