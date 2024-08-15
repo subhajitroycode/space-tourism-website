@@ -37,7 +37,7 @@ const Technology = () => {
             <p>{technology[activeIndex].description}</p>
           </div>
         </div>
-        <div className="technoly-image-container">
+        <div className="technology-image-container">
           <picture>
             <source
               media="(max-width: 1100px)"

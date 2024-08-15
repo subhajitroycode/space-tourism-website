@@ -513,6 +513,44 @@ hr {
     bottom: 0;
     width: 100%;
   }
+
+  .technology-container {
+    background-image: url("./assets/technology/background-technology-tablet.jpg");
+    height: 100vh;
+  }
+
+  .technology-content {
+    flex-direction: column-reverse;
+    margin-top: 4rem;
+    gap: 4rem;
+  }
+
+  .technology-content-container {
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+  }
+
+  .technology-navigation-container {
+    flex-direction: row;
+  }
+
+  .technology-content-info {
+    text-align: center;
+  }
+
+  .technology-content-info p {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .technology-image-container {
+    width: 100%;
+  }
+
+  .technology-image-container img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
